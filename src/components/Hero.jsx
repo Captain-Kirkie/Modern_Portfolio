@@ -43,10 +43,10 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
                     >
-                        <a href="#projects" className="btn-primary">
+                        {/* <a href="#projects" className="btn-primary">
                             View My Work
-                        </a>
-                        <a href="#contact" className="btn-secondary">
+                        </a> */}
+                        <a href="#contact" className="btn-primary">
                             Get In Touch
                         </a>
                     </motion.div>
