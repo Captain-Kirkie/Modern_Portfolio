@@ -8,6 +8,7 @@ const Navbar = ({ isScrolled }) => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     // { name: 'Projects', href: '#projects' },
+    { name: 'Personal', href: '#personal' },
     { name: 'Contact', href: '#contact' },
   ]
 
