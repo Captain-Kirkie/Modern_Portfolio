@@ -58,9 +58,8 @@ const Personal = () => {
                 <div className="w-24 h-1 bg-primary-600 mx-auto mb-12"></div>
 
                 <p className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-                    When I'm not coding, I enjoy exploring new hobbies and
-                    activities. Here are some things I love doing in my free
-                    time.
+                    When I'm not coding, I enjoy suffering in beautiful places.
+                    Here are some things I love doing in my free time.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
