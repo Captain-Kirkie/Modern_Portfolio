@@ -1,27 +1,8 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission here
-        console.log("Form submitted:", formData);
-        alert("Thank you for your message! I'll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
-    };
+    const email = "hietpaskirk@gmail.com";
+    const mailtoLink = `mailto:${email}`;
 
     const socialLinks = [
         {
@@ -54,88 +35,40 @@ const Contact = () => {
                 </h2>
                 <div className="w-24 h-1 bg-primary-600 mx-auto mb-12"></div>
 
-                <div className="max-w-2xl mx-auto">
-                    <p className="text-center text-lg text-gray-600 mb-8">
+                <div className="max-w-2xl mx-auto text-center">
+                    <p className="text-lg text-gray-600 mb-8">
                         I'm always open to discussing new projects, creative
-                        ideas, or opportunities to be part of your visions.
+                        ideas, or opportunities. Reach out anytime.
                     </p>
 
-                    <motion.form
-                        onSubmit={handleSubmit}
-                        className="space-y-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
+                    <motion.a
+                        href={mailtoLink}
+                        className="inline-flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold text-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
                     >
-                        <div>
-                            <label
-                                htmlFor="name"
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
-                                placeholder="Your Name"
-                            />
-                        </div>
-
-                        <div>
-                            <label
-                                htmlFor="email"
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
-                                placeholder="your.email@example.com"
-                            />
-                        </div>
-
-                        <div>
-                            <label
-                                htmlFor="message"
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                rows="6"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
-                                placeholder="Your message..."
-                            />
-                        </div>
-
-                        <motion.button
-                            type="submit"
-                            className="btn-primary w-full"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
                         >
-                            Send Message
-                        </motion.button>
-                    </motion.form>
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Email me
+                    </motion.a>
 
-                    <div className="mt-12 text-center">
+                    <a
+                        href={mailtoLink}
+                        className="block mt-4 text-gray-600 hover:text-primary-600 transition-colors text-lg"
+                    >
+                        {email}
+                    </a>
+
+                    <div className="mt-12 pt-8 border-t border-gray-200">
                         <p className="text-gray-600 mb-4">Or find me on:</p>
                         <div className="flex justify-center gap-6">
                             {socialLinks.map((social) => (
