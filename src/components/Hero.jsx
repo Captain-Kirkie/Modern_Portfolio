@@ -63,12 +63,12 @@ const Hero = () => {
                         <a href="#contact" className="btn-primary shadow-xl">
                             Get In Touch
                         </a>
-                        <a
+                        {/* <a
                             href="#personal"
                             className="px-6 py-3 bg-white/15 backdrop-blur border border-white/30 text-white rounded-lg font-semibold hover:bg-white/25 transition-colors duration-200"
                         >
                             See My Adventures
-                        </a>
+                        </a> */}
                     </motion.div>
                 </motion.div>
 
