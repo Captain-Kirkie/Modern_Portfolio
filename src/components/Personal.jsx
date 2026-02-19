@@ -45,7 +45,7 @@ const Personal = () => {
     ];
 
     return (
-        <section id="personal" className="section-container bg-gray-50">
+        <section id="personal" className="section-container section-outdoor relative overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const Personal = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
                     Personal Interests
                 </h2>
-                <div className="w-24 h-1 bg-primary-600 mx-auto mb-12"></div>
+                <div className="w-24 h-1 bg-primary-500 mx-auto mb-12 rounded-full"></div>
 
                 <p className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
                     When I'm not coding, I enjoy suffering in beautiful places.

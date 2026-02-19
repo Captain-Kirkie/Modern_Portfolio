@@ -1,34 +1,32 @@
-import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-// import Projects from './components/Projects'
-import Personal from './components/Personal'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Personal from "./components/Personal";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen">
       <Navbar isScrolled={isScrolled} />
       <Hero />
       <About />
-      {/* <Projects /> */}
       <Personal />
       <Contact />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

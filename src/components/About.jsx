@@ -29,7 +29,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="section-container bg-white">
+        <section id="about" className="section-container section-outdoor relative overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const About = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
                     About Me
                 </h2>
-                <div className="w-24 h-1 bg-primary-600 mx-auto mb-12"></div>
+                <div className="w-24 h-1 bg-primary-500 mx-auto mb-12 rounded-full"></div>
 
                 <div className="max-w-4xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-12 items-center">

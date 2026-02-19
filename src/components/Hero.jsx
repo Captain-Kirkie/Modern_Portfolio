@@ -1,32 +1,50 @@
 import { motion } from "framer-motion";
 
+const HERO_IMAGE =
+    "https://images.unsplash.com/photo-1506905925346-21bda3d9df9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+
 const Hero = () => {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-50 pt-20"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden"
         >
-            <div className="section-container text-center">
+            {/* French Alps background */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/30 to-slate-900/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-800/20 to-transparent" />
+
+            <div className="section-container relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.h1
-                        className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                    >
-                        Hi, I'm{" "}
-                        <span className="text-primary-600">Kirk Hietpas</span>
-                    </motion.h1>
-
                     <motion.p
-                        className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto"
+                        className="text-primary-200 text-sm uppercase tracking-[0.2em] mb-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        Software Engineer | Pretty Mediocre Athlete
+                    </motion.p>
+                    <motion.h1
+                        className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        Hi, I&apos;m{" "}
+                        <span className="text-primary-400">Kirk Hietpas</span>
+                    </motion.h1>
+                    <motion.p
+                        className="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow-md"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
                     >
                         A passionate full-stack developer focused on building
                         scalable, reliable systems. I enjoy learning new
@@ -36,18 +54,20 @@ const Hero = () => {
                         challenges, and continuously work to improve my skills
                         and deliver high-quality results.
                     </motion.p>
-
                     <motion.div
                         className="flex flex-col sm:flex-row gap-4 justify-center"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
+                        transition={{ delay: 0.7, duration: 0.8 }}
                     >
-                        {/* <a href="#projects" className="btn-primary">
-                            View My Work
-                        </a> */}
-                        <a href="#contact" className="btn-primary">
+                        <a href="#contact" className="btn-primary shadow-xl">
                             Get In Touch
+                        </a>
+                        <a
+                            href="#personal"
+                            className="px-6 py-3 bg-white/15 backdrop-blur border border-white/30 text-white rounded-lg font-semibold hover:bg-white/25 transition-colors duration-200"
+                        >
+                            See My Adventures
                         </a>
                     </motion.div>
                 </motion.div>
@@ -64,7 +84,7 @@ const Hero = () => {
                         className="inline-block"
                     >
                         <svg
-                            className="w-6 h-6 text-primary-600"
+                            className="w-6 h-6 text-white/80"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"

@@ -23,7 +23,7 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="section-container bg-white">
+        <section id="contact" className="section-container section-outdoor relative overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const Contact = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">
                     Get In Touch
                 </h2>
-                <div className="w-24 h-1 bg-primary-600 mx-auto mb-12"></div>
+                <div className="w-24 h-1 bg-primary-500 mx-auto mb-12 rounded-full"></div>
 
                 <div className="max-w-2xl mx-auto text-center">
                     <p className="text-lg text-gray-600 mb-8">
