@@ -28,7 +28,7 @@ const Personal = () => {
             id: 4,
             src: "https://storage.googleapis.com/portfolio_images_kh/touring.jpg",
             alt: "Activity 4",
-            title: "Skiing kind hard",
+            title: "Skiing kinda hard",
         },
         {
             id: 5,
