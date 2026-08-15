@@ -6,4 +6,12 @@ export default defineConfig({
   plugins: [react()],
   // Required for GitHub Pages - repo: Kirk_Hietpas_Portfolio
   base: '/Kirk_Hietpas_Portfolio/',
+  server: {
+    host: '127.0.0.1',
+    port: 5173,
+    strictPort: true,
+    watch: {
+      ignored: ['**/node_modules/**', '**/.git/**', '**/dist/**'],
+    },
+  },
 })

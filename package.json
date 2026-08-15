@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "homepage": "https://captain-kirkie.github.io/Kirk_Hietpas_Portfolio/",
+  "engines": {
+    "node": ">=18 <25"
+  },
   "scripts": {
-    "dev": "vite",
-    "dev:clean": "vite --force",
+    "dev": "node scripts/check-node.js && vite",
+    "dev:clean": "node scripts/check-node.js && vite --force",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
