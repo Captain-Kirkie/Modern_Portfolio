@@ -154,8 +154,7 @@ const Experience = () => {
                 </h2>
                 <div className="w-24 h-1 bg-primary-500 mx-auto mb-6 rounded-full"></div>
                 <p className="text-center text-lg text-gray-600 mb-14 max-w-2xl mx-auto">
-                    Work and education, newest first. Select an entry to read
-                    more.
+                    Work and Education. From Scientist to Software engineer!
                 </p>
 
                 <ol className="relative max-w-4xl mx-auto">
