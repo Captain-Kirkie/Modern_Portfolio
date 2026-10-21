@@ -117,13 +117,13 @@ const experiences = [
         end: "August 2018",
         current: false,
         highlights: [
-            "Worked with a team responsible for processing and delivering prescription medication to outpatients while providing excellent customer service.",
+            "Job right after college, I worked at a pharmacy delivering prescription medication to outpatients while providing excellent customer service. Figuring out where I wanted to go next!",
         ],
         technologies: [],
     },
     {
         id: "minnesota",
-        company: "University of Minnesota",
+        company: "University of Minnesota - Duluth",
         role: "Bachelor of Science",
         team: "Major: Bio",
         location: null,
@@ -132,6 +132,21 @@ const experiences = [
         current: false,
         kind: "education",
         highlights: [],
+        technologies: [],
+        description: "UMD Rules! Go Dogs!",
+    },
+    {
+        id: "earlier",
+        company: null,
+        role: "College, jobs, research, and the rest of my adolescence",
+        team: null,
+        location: null,
+        start: null,
+        end: null,
+        current: false,
+        highlights: [
+            "Ask me about my life! I think it's exciting!",
+        ],
         technologies: [],
     },
 ];
@@ -252,13 +267,15 @@ const Experience = () => {
                                     >
                                         {role.role}
                                     </h3>
-                                    <p
-                                        className={`mt-1 text-gray-700 ${alignLeft ? "md:text-right" : ""
-                                            }`}
-                                    >
-                                        {role.company}
-                                        {role.team ? ` · ${role.team}` : ""}
-                                    </p>
+                                    {(role.company || role.team) && (
+                                        <p
+                                            className={`mt-1 text-gray-700 ${alignLeft ? "md:text-right" : ""
+                                                }`}
+                                        >
+                                            {role.company}
+                                            {role.team ? ` · ${role.team}` : ""}
+                                        </p>
+                                    )}
                                     {role.location && (
                                         <p
                                             className={`mt-1 text-sm text-gray-500 ${alignLeft ? "md:text-right" : ""
@@ -335,10 +352,12 @@ const Experience = () => {
                                 >
                                     {selected.role}
                                 </h3>
-                                <p className="mt-1 text-lg text-gray-700">
-                                    {selected.company}
-                                    {selected.team ? ` · ${selected.team}` : ""}
-                                </p>
+                                {(selected.company || selected.team) && (
+                                    <p className="mt-1 text-lg text-gray-700">
+                                        {selected.company}
+                                        {selected.team ? ` · ${selected.team}` : ""}
+                                    </p>
+                                )}
                                 {selected.location && (
                                     <p className="mt-1 text-sm text-gray-500">
                                         {selected.location}
